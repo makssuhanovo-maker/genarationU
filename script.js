@@ -3,6 +3,13 @@ const siteNav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = document.querySelectorAll(".reveal");
 const observedSections = document.querySelectorAll("main section[id]");
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+
+window.addEventListener("load", () => {
+  if (window.location.hash) return;
+  if (navigationEntry?.type === "back_forward") return;
+  window.scrollTo(0, 0);
+});
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {

@@ -1,0 +1,129 @@
+backend:
+  name: github
+  repo: makssuhanovo-maker/genarationU
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "uk"
+
+collections:
+  - name: "site"
+    label: "Головна сторінка"
+    files:
+      - file: "content/site.json"
+        label: "Контент головної"
+        name: "site_content"
+        format: "json"
+        fields:
+          - { label: "Назва сайту", name: "siteName", widget: "string" }
+          - { label: "Підзаголовок сайту", name: "siteSubtitle", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок 1", name: "titlePrimary", widget: "string" }
+              - { label: "Заголовок 2", name: "titleAccent", widget: "string" }
+              - { label: "Заголовок 3", name: "titleSecondary", widget: "string" }
+              - { label: "Опис", name: "lead", widget: "text" }
+              - { label: "Кнопка 1 текст", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Кнопка 1 посилання", name: "primaryCtaHref", widget: "string" }
+              - { label: "Кнопка 2 текст", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Кнопка 2 посилання", name: "secondaryCtaHref", widget: "string" }
+          - label: "Про організацію"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Абзаци", name: "paragraphs", widget: "list", field: { label: "Абзац", name: "paragraph", widget: "text" } }
+          - label: "Послуги"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Курси на головній"
+            name: "coursesPreview"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Звіти на головній"
+            name: "reportsSummary"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Зворотний зв'язок"
+            name: "feedback"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Контакти"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Опис", name: "paragraph", widget: "text" }
+              - { label: "Адреса", name: "address", widget: "string" }
+              - { label: "Телефон", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+  - name: "courses"
+    label: "Сторінка курсів"
+    files:
+      - file: "content/courses.json"
+        label: "Контент курсів"
+        name: "courses_content"
+        format: "json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Опис", name: "text", widget: "text" }
+          - label: "Каталог"
+            name: "catalog"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Сертифікація"
+            name: "certification"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+  - name: "reports"
+    label: "Сторінка звітів"
+    files:
+      - file: "content/reports.json"
+        label: "Контент звітів"
+        name: "reports_content"
+        format: "json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+              - { label: "Опис", name: "text", widget: "text" }
+          - label: "Огляд"
+            name: "overview"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }
+          - label: "Прозорість"
+            name: "transparency"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Заголовок", name: "title", widget: "string" }

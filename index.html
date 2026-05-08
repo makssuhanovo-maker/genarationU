@@ -17,7 +17,7 @@
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-yu.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body data-content-page="site">
   <div class="page-shell">
     <div class="page-atmosphere" aria-hidden="true">
       <span class="atmosphere-line atmosphere-line-one"></span>
@@ -33,12 +33,13 @@
             <img src="./assets/logo-instagram.jpg" alt="Логотип Покоління Ю">
           </span>
           <span class="brand-text">
-            <strong>Покоління Ю</strong>
-            <span>Громадська організація</span>
+            <strong data-content="siteName">Покоління Ю</strong>
+            <span data-content="siteSubtitle">Громадська організація</span>
           </span>
         </a>
 
         <div class="header-actions">
+          <button class="quiz-launch" type="button" data-quiz-open aria-controls="quiz-flyout" aria-expanded="false">Квіз</button>
           <div class="social-links" aria-label="Соціальні мережі">
             <a class="social-link" href="https://www.instagram.com/ugeneration.ua" target="_blank" rel="noreferrer" aria-label="Instagram">
               <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/instagram.svg" alt="">
@@ -60,12 +61,12 @@
           </button>
 
           <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
-            <a href="#about">Про нас</a>
-            <a href="#opportunities">Можливості</a>
-            <a href="#programs">Програми</a>
-            <a href="#results">Результати</a>
-            <a href="#finance">Звіти</a>
-            <a href="#contact">Контакти</a>
+            <a href="#about">Організація</a>
+            <a href="#services">Послуги</a>
+            <a href="#portfolio">Кейси</a>
+            <a href="#courses">Курси</a>
+            <a href="#reports-summary">Звіти</a>
+            <a href="#feedback">Зворотний зв'язок</a>
           </nav>
         </div>
       </div>
@@ -82,20 +83,20 @@
 
           <div class="hero-overlay container">
             <div class="hero-copy">
-              <p class="eyebrow">Громадська організація</p>
+              <p class="eyebrow" data-content="hero.eyebrow">Громадська організація</p>
               <div class="hero-title-stack">
-                <span class="hero-title-band hero-title-band-light">Покоління</span>
-                <span class="hero-title-band hero-title-band-dark">Ю</span>
-                <span class="hero-title-band hero-title-band-accent">молодь, що змінює країну</span>
+                <span class="hero-title-band hero-title-band-light" data-content="hero.titlePrimary">Покоління</span>
+                <span class="hero-title-band hero-title-band-dark" data-content="hero.titleAccent">Ю</span>
+                <span class="hero-title-band hero-title-band-accent" data-content="hero.titleSecondary">молодь, що змінює країну</span>
               </div>
-              <p class="hero-lead hero-lead-overlay">
+              <p class="hero-lead hero-lead-overlay" data-content="hero.lead">
                 Ми навчаємо молодь взаємодіяти з владою, реалізовувати власні ініціативи та
                 впливати на розвиток громад через адвокацію, участь і співпрацю.
               </p>
 
               <div class="hero-actions">
-                <a class="button button-primary" href="#programs">Переглянути програми</a>
-                <a class="button button-secondary" href="mailto:ugeneration2023@gmail.com">Написати нам</a>
+                <a class="button button-primary" href="#services" data-content="hero.primaryCtaLabel" data-content-attr="href:hero.primaryCtaHref">Переглянути послуги</a>
+                <a class="button button-secondary" href="./courses.html" data-content="hero.secondaryCtaLabel" data-content-attr="href:hero.secondaryCtaHref">Освітні курси</a>
               </div>
             </div>
 
@@ -117,87 +118,41 @@
         </div>
       </section>
 
-      <section class="section brand-feed section-tint" id="visual-style">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Візуальний стиль</p>
-            <h2 class="section-title">Сайт говорить тією ж мовою, що й Instagram: великі меседжі, чисті контрасти й квадратний ритм постів.</h2>
-          </div>
-
-          <div class="feed-grid">
-            <article class="feed-card reveal">
-              <div class="feed-media">
-                <img src="./assets/post-stakeholders.jpg" alt="Фірмовий інформаційний пост Покоління Ю">
-              </div>
-              <div class="feed-caption">
-                <span class="feed-label">Освітній контент</span>
-                <strong>Пояснюємо складні теми простою, дуже впізнаваною візуальною мовою.</strong>
-              </div>
-            </article>
-
-            <article class="feed-card reveal feed-card-accent">
-              <div class="feed-media">
-                <img src="./assets/post-valentines.webp" alt="Креативний пост Покоління Ю">
-              </div>
-              <div class="feed-caption">
-                <span class="feed-label">Кампанійний стиль</span>
-                <strong>Синьо-жовті плашки, гумор і постова композиція, яка працює і в соцмережах, і на сайті.</strong>
-              </div>
-            </article>
-
-            <article class="feed-card reveal">
-              <div class="feed-media">
-                <img src="./assets/post-results-2025.webp" alt="Пост з підсумками року">
-              </div>
-              <div class="feed-caption">
-                <span class="feed-label">Підсумки та звіти</span>
-                <strong>Результати можна подавати як візуальні обкладинки, а не тільки сухими цифрами.</strong>
-              </div>
-            </article>
-
-            <article class="feed-card reveal">
-              <div class="feed-media">
-                <img src="./assets/post-wave-2025.webp" alt="Пост про адвокаційну хвилю">
-              </div>
-              <div class="feed-caption">
-                <span class="feed-label">Події та програми</span>
-                <strong>Живі фото, брендовані накладки та короткі заголовки створюють цілісну комунікацію.</strong>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="about">
         <div class="container split-section">
           <div class="section-copy reveal">
-            <p class="eyebrow">Про нас</p>
-            <h2 class="section-title">Покоління Ю посилює голос молоді на місцевому та національному рівнях.</h2>
-            <p>
-              Наша мета — допомогти молодим людям зрозуміти, як працює держава, і дати їм
-              інструменти для впливу: від першого тренінгу до власної адвокаційної кампанії.
+            <p class="eyebrow" data-content="about.eyebrow">Про організацію</p>
+            <h2 class="section-title" data-content="about.title">Покоління Ю посилює молодіжний голос у політиках, громадах і державних рішеннях.</h2>
+            <p data-content="about.paragraphs.0">
+              Ми працюємо на перетині політичної освіти, адвокації та молодіжних політик.
+              Допомагаємо молодим людям, інститутам громадянського суспільства та органам влади
+              будувати сильніші механізми участі й прийняття рішень.
             </p>
-            <p>
-              Освітні заходи, менторство та підтримка в реалізації ідей створюють простір, у якому
-              молодь не просто вчиться, а отримує досвід реальних змін.
+            <p data-content="about.paragraphs.1">
+              Для нас важливо не просто провести навчання, а залишити після себе інструменти,
+              команди, рішення і політики, які працюють у громадах далі.
             </p>
 
-            <div class="value-list">
-              <article class="mini-card">
-                <h3>Демократія</h3>
-                <p>Надаємо знання та інструменти, щоб молодь впливала на рішення у своїх громадах.</p>
+            <div class="org-grid">
+              <article class="org-card">
+                <span class="org-label">Візія</span>
+                <h3>Молодь є повноправним учасником формування державної та місцевої політики.</h3>
+                <p>Ми хочемо бачити середовище, де молодіжний голос не епізодичний, а системний.</p>
               </article>
-              <article class="mini-card">
-                <h3>Професіоналізм</h3>
-                <p>Підтримуємо ініціативи консультаціями, юридичною допомогою та експертною співпрацею.</p>
+              <article class="org-card">
+                <span class="org-label">Місія</span>
+                <h3>Посилювати адвокаційний, освітній та політичний потенціал молоді й молодіжних інституцій.</h3>
+                <p>Поєднуємо навчання, менторство, пілотування рішень і діалог з владою.</p>
               </article>
-              <article class="mini-card">
-                <h3>Інновації</h3>
-                <p>Використовуємо інтерактивні формати, симуляції та нові підходи до громадянської освіти.</p>
+              <article class="org-card">
+                <span class="org-label">Портфоліо</span>
+                <h3>Працюємо з громадами, молодіжними ІГС, учасниками освітніх програм і публічними інституціями.</h3>
+                <p>У портфоліо: школи адвокації, школи законотворця, локальні кампанії, стажування та політична освіта.</p>
               </article>
-              <article class="mini-card">
-                <h3>Толерантність</h3>
-                <p>Об'єднуємо людей різних поглядів, поважаючи цінності кожного учасника спільноти.</p>
+              <article class="org-card">
+                <span class="org-label">Команда</span>
+                <h3>Ядро організації поєднує експертизу в адвокації, громадянській освіті, фасилітації та policy design.</h3>
+                <p>Структура команди може бути винесена окремо з іменами, ролями та короткими біо.</p>
               </article>
             </div>
           </div>
@@ -218,184 +173,195 @@
         </div>
       </section>
 
-      <section class="section section-tint" id="opportunities">
+      <section class="section section-tint" id="organization">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Можливості для тебе</p>
-            <h2 class="section-title">Три способи долучитися до змін: вчитися, запускати кампанії та отримувати досвід.</h2>
+            <p class="eyebrow">Інституційна рамка</p>
+            <h2 class="section-title">На сайті має бути не лише обкладинка організації, а й чітка інституційна довіра.</h2>
           </div>
 
-          <div class="opportunity-grid">
-            <article class="feature-card reveal">
-              <span class="card-badge">Навчання</span>
-              <h3>Знання та практичні навички для адвокації й взаємодії з владою.</h3>
-              <p>Теоретичний блок, симуляційні формати та розбір інструментів участі, які можна застосувати у своїй громаді.</p>
+          <div class="governance-grid">
+            <article class="governance-card reveal">
+              <span class="card-badge">Політики</span>
+              <h3>Кодекси, політики безпеки, етики, роботи з даними та процедури реагування.</h3>
+              <p>Це окремий блок для документів, які підвищують довіру до організації та її процесів.</p>
+            </article>
+            <article class="governance-card reveal">
+              <span class="card-badge">Донори</span>
+              <h3>Показуємо, хто підтримує діяльність організації і які напрями розвиваються у партнерстві.</h3>
+              <p>Тут можуть бути короткі описи підтриманих програм, а не лише логотипи.</p>
+            </article>
+            <article class="governance-card reveal">
+              <span class="card-badge">Команда</span>
+              <h3>Окремий модуль для представлення ролей, компетенцій і зон відповідальності команди.</h3>
+              <p>Навіть без великих біографій це вже допомагає показати зрілу й живу організацію.</p>
+            </article>
+          </div>
+
+          <div class="partners-panel reveal">
+            <div class="service-panel-head">
+              <p class="eyebrow">Партнери та донори</p>
+              <h3>Партнерські інституції, з якими організація реалізовувала програми та адвокаційні ініціативи.</h3>
+            </div>
+
+            <div class="partners-grid reveal">
+              <div class="partner-logo"><img src="./assets/logo-partner-1.png" alt="Логотип партнера"></div>
+              <div class="partner-logo"><img src="./assets/logo-partner-2.png" alt="Логотип партнера"></div>
+              <div class="partner-logo"><img src="./assets/logo-partner-3.png" alt="Логотип партнера"></div>
+              <div class="partner-logo"><img src="./assets/logo-partner-4.png" alt="Логотип партнера"></div>
+              <div class="partner-logo"><img src="./assets/logo-partner-5.png" alt="Логотип партнера"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-content="services.eyebrow">Послуги організації</p>
+            <h2 class="section-title" data-content="services.title">Три ключові напрями співпраці для молодіжних ІГС, громад і публічних інституцій.</h2>
+          </div>
+
+          <div class="service-offer-grid">
+            <article class="service-offer-card reveal">
+              <span class="card-badge">Адвокація</span>
+              <h3>Посилення адвокаційного потенціалу молодіжних ІГС</h3>
+              <p>Діагностика спроможності, дизайн кампаній, менторство команд, планування stakeholder map і супровід впровадження.</p>
+              <a class="button button-primary" href="mailto:ugeneration2023@gmail.com?subject=Запит%20на%20послугу%20—%20Посилення%20адвокаційного%20потенціалу&body=Вітаю!%20Хочемо%20обговорити%20послугу%20посилення%20адвокаційного%20потенціалу%20молодіжної%20ІГС.">Надіслати запит</a>
             </article>
 
-            <article class="feature-card reveal">
-              <span class="card-badge">Менторство</span>
-              <h3>Супровід у розробці адвокаційної кампанії від ідеї до впровадження.</h3>
-              <p>Допомагаємо оцінити потреби молоді, сформувати план дій і підготувати комунікаційну стратегію.</p>
+            <article class="service-offer-card reveal">
+              <span class="card-badge">Молодіжні політики</span>
+              <h3>Розробка та пілотування молодіжних політик для органів влади</h3>
+              <p>Формуємо процес від дослідження потреб молоді до пілотування рішень, фасилітації консультацій та оцінки результатів.</p>
+              <a class="button button-primary" href="mailto:ugeneration2023@gmail.com?subject=Запит%20на%20послугу%20—%20Молодіжні%20політики&body=Вітаю!%20Хочемо%20обговорити%20розробку%20та%20пілотування%20молодіжних%20політик%20для%20органу%20влади.">Надіслати запит</a>
             </article>
 
-            <article class="feature-card reveal">
-              <span class="card-badge">Досвід</span>
-              <h3>Участь у тренінгах, волонтерстві та спільних подіях із громадами й владою.</h3>
-              <p>Посилюй свій голос у політиці через практику, фасилітацію подій та командну роботу в проєктах.</p>
+            <article class="service-offer-card reveal">
+              <span class="card-badge">Політична освіта</span>
+              <h3>Політична освіта для молоді, команд і громадських лідерів</h3>
+              <p>Створюємо навчальні формати про політичну систему, участь, представництво, policy cycle та взаємодію з владою.</p>
+              <a class="button button-primary" href="mailto:ugeneration2023@gmail.com?subject=Запит%20на%20послугу%20—%20Політична%20освіта&body=Вітаю!%20Хочемо%20обговорити%20освітню%20програму%20або%20тренінг%20з%20політичної%20освіти.">Надіслати запит</a>
             </article>
           </div>
 
           <div class="service-panel reveal">
             <div class="service-panel-head">
-              <p class="eyebrow">Наші послуги</p>
-              <h3>Готові формати подій для молоді, громад і партнерів.</h3>
+              <p class="eyebrow">Формати співпраці</p>
+              <h3>Окрім повних програм, можна звертатися і за точковими форматами роботи.</h3>
             </div>
 
             <div class="service-grid">
               <article class="service-card">
-                <strong>Урок демократії</strong>
-                <span>45 хв</span>
-                <p>Короткий практичний формат про інструменти участі та базові принципи адвокації.</p>
+                <strong>Стратегічна сесія</strong>
+                <span>1 день</span>
+                <p>Для команд, які хочуть уточнити проблему, карту стейкхолдерів і логіку змін.</p>
               </article>
               <article class="service-card">
-                <strong>Тренінг з адвокації</strong>
-                <span>2 год.</span>
-                <p>Підготовка плану кампанії, робота з петиціями та комунікаційними стратегіями.</p>
+                <strong>Тренінговий модуль</strong>
+                <span>2-4 год.</span>
+                <p>Навчальні модулі під потребу організації, громади, молодіжної ради або команди.</p>
               </article>
               <article class="service-card">
-                <strong>Light-школа адвокації</strong>
-                <span>8 год.</span>
-                <p>Поглиблений формат з симуляційною грою, практикою та структурою запуску кампанії.</p>
+                <strong>Супровід команди</strong>
+                <span>від 1 міс.</span>
+                <p>Менторський супровід для запуску кампанії, політики або локальної участі молоді.</p>
               </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="programs">
+      <section class="section section-tint" id="portfolio">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Наші програми</p>
-            <h2 class="section-title">Портфель програм, який працює і для молоді в громадах, і для майбутніх державотворців.</h2>
+            <p class="eyebrow">Портфоліо та досвід</p>
+            <h2 class="section-title">Кейси, результати та відгуки краще працюють як окремий сильний блок довіри.</h2>
           </div>
 
-          <div class="program-grid">
-            <article class="program-card reveal">
-              <div class="program-top">
-                <span class="card-badge">Для молоді в громадах</span>
-                <h3>Школа адвокації</h3>
-                <p>Посилюємо вплив молоді в громадах через тренінги, менторство та спільні заходи з представниками влади.</p>
-              </div>
+          <div class="portfolio-grid">
+            <article class="portfolio-card reveal">
+              <span class="card-badge">Кейс</span>
+              <h3>Школа адвокації</h3>
+              <p>Програма для молоді в громадах, яка поєднує навчання, менторство і запуск локальних кампаній.</p>
               <ul class="program-list">
-                <li>Тренінги з адвокації та взаємодії з владою</li>
-                <li>Менторська підтримка у впровадженні кампаній</li>
-                <li>Спільні події молоді та місцевих лідерів</li>
+                <li>20 громад-учасниць</li>
+                <li>10 локальних кампаній</li>
+                <li>450+ випускників і учасників</li>
               </ul>
-              <div class="program-meta">
-                <span>450+ випускників</span>
-                <span>20 громад проєкту</span>
-                <span>10 кампаній</span>
-              </div>
             </article>
 
-            <article class="program-card reveal">
-              <div class="program-top">
-                <span class="card-badge">Для майбутніх державотворців</span>
-                <h3>Школа законотворця</h3>
-                <p>Формуємо кадровий резерв для держави через розуміння парламенту, законотворчого процесу та практики діалогу з депутатами.</p>
-              </div>
+            <article class="portfolio-card reveal">
+              <span class="card-badge">Кейс</span>
+              <h3>Школа законотворця</h3>
+              <p>Формат для майбутніх державотворців, який знайомить із законодавчим процесом і політичною участю.</p>
               <ul class="program-list">
-                <li>Тренінги про парламент і роботу народного депутата</li>
-                <li>Менторство у розробці законопроєктів</li>
-                <li>Зустрічі та діалог молоді з парламентарями</li>
+                <li>15 напрацьованих законодавчих ідей</li>
+                <li>7 зустрічей з парламентарями</li>
+                <li>85 випускників програми</li>
               </ul>
-              <div class="program-meta">
-                <span>85 випускників</span>
-                <span>15 законопроєктів</span>
-                <span>7 зустрічей з депутатами</span>
-              </div>
             </article>
 
-            <article class="program-card reveal">
-              <div class="program-top">
-                <span class="card-badge">Для членів спільноти</span>
-                <h3>U-Agent</h3>
-                <p>Створюємо мережу тренерів і координаторів у громадах, щоб посилювати місцеві осередки та масштабувати вплив.</p>
-              </div>
+            <article class="portfolio-card reveal">
+              <span class="card-badge">Кейс</span>
+              <h3>U-Agent</h3>
+              <p>Програма для внутрішнього посилення спільноти та підготовки тренерів, координаторів і локальних лідерів.</p>
               <ul class="program-list">
-                <li>Тренінги для тренерів та координаторів</li>
-                <li>Менторська підтримка освітніх подій</li>
-                <li>Навчальні та інформаційні матеріали для осередків</li>
+                <li>3 локальні осередки</li>
+                <li>21 учасник мережі</li>
+                <li>Менторська та освітня підтримка</li>
               </ul>
-              <div class="program-meta">
-                <span>1 тренінг для тренерів</span>
-                <span>3 осередки</span>
-                <span>21 випускник</span>
-              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card reveal">
+              <span class="feed-label">Кейс успіху</span>
+              <strong>Ірпінь</strong>
+              <p>Учасники просунули створення молодіжного простору як інструменту довготривалої участі молоді.</p>
+            </article>
+            <article class="testimonial-card reveal">
+              <span class="feed-label">Кейс успіху</span>
+              <strong>Славутич</strong>
+              <p>Локальна кампанія допомогла повернути пряме залізничне сполучення з Києвом як практичний policy-result.</p>
+            </article>
+            <article class="testimonial-card reveal">
+              <span class="feed-label">Відгук</span>
+              <strong>Учасницький досвід</strong>
+              <p>Блок для коротких відгуків можна окремо поповнювати з програм, курсів і кейсів співпраці.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section results-section" id="results">
-        <div class="container">
-          <div class="results-top">
-            <div class="results-intro reveal">
-              <p class="eyebrow">Наші результати</p>
-              <h2 class="section-title">Результати, які вимірюються не лише цифрами, а й змінами в конкретних громадах.</h2>
-              <p>
-                Ми працюємо не для “галочки”, а для реальних зрушень: від освітніх програм і
-                стажувань до локальних рішень, які молодь просуває у своїх містах.
-              </p>
-            </div>
-
-            <div class="stats-grid">
-              <article class="stat-card reveal">
-                <strong>750+</strong>
-                <span>учасників заходів</span>
-              </article>
-              <article class="stat-card reveal">
-                <strong>15</strong>
-                <span>законопроєктів учасників</span>
-              </article>
-              <article class="stat-card reveal">
-                <strong>3</strong>
-                <span>реалізовані програми</span>
-              </article>
-              <article class="stat-card reveal">
-                <strong>10</strong>
-                <span>адвокаційних кампаній</span>
-              </article>
-              <article class="stat-card reveal">
-                <strong>20</strong>
-                <span>громад-учасниць</span>
-              </article>
-            </div>
-          </div>
-
-          <div class="campaigns-card reveal">
-            <div class="campaigns-head">
-              <h3>Кампанії молоді в громадах</h3>
-              <p>Кілька прикладів реальних змін, які впроваджували учасники програм.</p>
-            </div>
-
-            <div class="campaign-grid">
-              <article><strong>Ірпінь</strong><span>створення молодіжного простору</span></article>
-              <article><strong>Ржищів</strong><span>затвердження положення про молодіжний простір</span></article>
-              <article><strong>Славутич</strong><span>відновлення прямого залізничного сполучення з Києвом</span></article>
-              <article><strong>Ніжин</strong><span>очищення річки Остер</span></article>
-              <article><strong>Бахмач</strong><span>новий молодіжний STEM-простір та положення про простір “Синергія”</span></article>
-              <article><strong>Чернігів</strong><span>програма стажування молоді в органах влади</span></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-tint" id="finance">
+      <section class="section" id="courses">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Фінансова прозорість</p>
-            <h2 class="section-title">Відкрито показуємо, з ким працюємо і куди спрямовуємо ресурси.</h2>
+            <p class="eyebrow" data-content="coursesPreview.eyebrow">Освітні курси</p>
+            <h2 class="section-title" data-content="coursesPreview.title">Окрема сторінка курсів дозволяє зручно винести відео, модулі та майбутнє тестування.</h2>
+          </div>
+
+          <div class="courses-preview">
+            <article class="course-teaser-card reveal">
+              <span class="card-badge">Доступ до курсів</span>
+              <h3>Курси можна розміщувати на YouTube або на окремій сторінці з модулями.</h3>
+              <p>Зараз найкраще рішення для поточного сайту: винести курси на окрему сторінку з картками, відео-плейлистами та короткими описами.</p>
+              <a class="button button-primary" href="./courses.html">Перейти до курсів</a>
+            </article>
+            <article class="course-teaser-card reveal">
+              <span class="card-badge">Сертифікати</span>
+              <h3>Тестування і генерація сертифікатів потребують окремої логіки.</h3>
+              <p>На першому етапі можна дати доступ до курсів і форм тестування, а генерацію сертифікату підключити другим кроком через Google Forms, Typeform або LMS.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="reports-summary">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-content="reportsSummary.eyebrow">Звіти організації</p>
+            <h2 class="section-title" data-content="reportsSummary.title">На головній достатньо короткого блоку з висновками та переходом на окрему сторінку звітності.</h2>
           </div>
 
           <div class="finance-grid">
@@ -404,7 +370,7 @@
                 <span class="finance-year">2024</span>
                 <strong>2 113 149 ₴</strong>
               </div>
-              <p>Основні надходження в експорті сторінки позначені як підтримка від ІСАР Єднання та Crown Agents.</p>
+              <p>Підсумок року, ключові джерела підтримки та загальна рамка реалізованих програм.</p>
               <div class="meter">
                 <span style="width: 55.4%"></span>
               </div>
@@ -420,7 +386,7 @@
                 <span class="finance-year">2023</span>
                 <strong>690 372 ₴</strong>
               </div>
-              <p>У структурі витрат пріоритет мали проєктна діяльність та оплата праці, а ключовим донором був Crown Agents.</p>
+              <p>Короткий огляд структури витрат, фокусу року та базових показників діяльності.</p>
               <div class="meter">
                 <span style="width: 81.5%"></span>
               </div>
@@ -431,22 +397,39 @@
               <small>Оплата праці — 18.5%</small>
             </article>
           </div>
+
+          <div class="reports-cta reveal">
+            <a class="button button-primary" href="./reports.html">Перейти до сторінки звітів</a>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="partners">
+      <section class="section" id="feedback">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Партнери</p>
-            <h2 class="section-title">Співпрацюємо з організаціями, які підсилюють молодіжну участь та розвиток громад.</h2>
+            <p class="eyebrow" data-content="feedback.eyebrow">Зворотний зв'язок</p>
+            <h2 class="section-title" data-content="feedback.title">Окремий блок для звернень, пропозицій і скарг робить сайт сервісним, а не лише презентаційним.</h2>
           </div>
 
-          <div class="partners-grid reveal">
-            <div class="partner-logo"><img src="./assets/logo-partner-1.png" alt="Логотип партнера"></div>
-            <div class="partner-logo"><img src="./assets/logo-partner-2.png" alt="Логотип партнера"></div>
-            <div class="partner-logo"><img src="./assets/logo-partner-3.png" alt="Логотип партнера"></div>
-            <div class="partner-logo"><img src="./assets/logo-partner-4.png" alt="Логотип партнера"></div>
-            <div class="partner-logo"><img src="./assets/logo-partner-5.png" alt="Логотип партнера"></div>
+          <div class="feedback-grid">
+            <article class="feedback-card reveal">
+              <span class="card-badge">Скарга</span>
+              <h3>Подати скаргу</h3>
+              <p>Окремий канал для етичних, організаційних або процесуальних зауважень.</p>
+              <a class="button button-secondary" href="mailto:ugeneration2023@gmail.com?subject=Скарга%20через%20сайт">Надіслати скаргу</a>
+            </article>
+            <article class="feedback-card reveal">
+              <span class="card-badge">Пропозиція</span>
+              <h3>Подати пропозицію</h3>
+              <p>Місце для ідей щодо програм, партнерств, покращень сервісу чи нових форматів співпраці.</p>
+              <a class="button button-secondary" href="mailto:ugeneration2023@gmail.com?subject=Пропозиція%20через%20сайт">Надіслати пропозицію</a>
+            </article>
+            <article class="feedback-card reveal">
+              <span class="card-badge">Запит</span>
+              <h3>Загальне звернення</h3>
+              <p>Для організацій, донорів, громад і молодіжних команд, які хочуть почати розмову.</p>
+              <a class="button button-secondary" href="mailto:ugeneration2023@gmail.com?subject=Звернення%20через%20сайт">Надіслати звернення</a>
+            </article>
           </div>
         </div>
       </section>
@@ -454,30 +437,30 @@
       <section class="section contact-section" id="contact">
         <div class="container contact-grid">
           <div class="contact-copy reveal">
-            <p class="eyebrow">Контакти</p>
-            <h2 class="section-title">Шукаєте програму для молоді, хочете партнерство або запуск події у громаді?</h2>
-            <p>
-              Напишіть нам, якщо хочете провести освітню подію, подати громаду або обговорити
-              формат співпраці для молодіжної команди, школи чи організації.
+            <p class="eyebrow" data-content="contact.eyebrow">Контакти</p>
+            <h2 class="section-title" data-content="contact.title">Потрібна співпраця, консультація або окрема програма для вашої команди чи громади?</h2>
+            <p data-content="contact.paragraph">
+              Напишіть нам, якщо хочете запустити спільний проєкт, замовити освітній або policy-формат,
+              обговорити партнерство чи запросити команду до роботи з молодіжною політикою.
             </p>
           </div>
 
           <div class="contact-card reveal">
             <div class="contact-item">
               <span>Адреса для листування</span>
-              <strong>м. Київ, вул. М. Василенка, 19</strong>
+              <strong data-content="contact.address">м. Київ, вул. М. Василенка, 19</strong>
             </div>
             <div class="contact-item">
               <span>Телефон</span>
-              <a href="tel:+380995497299">099-549-7299</a>
+              <a href="tel:+380995497299" data-content="contact.phone" data-content-link="tel">099-549-7299</a>
             </div>
             <div class="contact-item">
               <span>Email</span>
-              <a href="mailto:ugeneration2023@gmail.com">ugeneration2023@gmail.com</a>
+              <a href="mailto:ugeneration2023@gmail.com" data-content="contact.email" data-content-link="mailto">ugeneration2023@gmail.com</a>
             </div>
             <div class="contact-actions">
-              <a class="button button-primary" href="mailto:ugeneration2023@gmail.com">Зв'язатися</a>
-              <a class="button button-secondary" href="tel:+380995497299">Подзвонити</a>
+              <a class="button button-primary" href="mailto:ugeneration2023@gmail.com">Написати команді</a>
+              <a class="button button-secondary" href="./reports.html">Переглянути звіти</a>
             </div>
           </div>
         </div>
@@ -489,15 +472,46 @@
         <div class="footer-brand">
           <img src="./assets/logo-instagram.jpg" alt="Логотип Покоління Ю">
           <div>
-          <strong>Покоління Ю</strong>
+          <strong data-content="siteName">Покоління Ю</strong>
           <p>Освіта, адвокація, менторство та сильні молодіжні спільноти.</p>
           </div>
         </div>
         <a href="#top" class="footer-link">Наверх</a>
       </div>
     </footer>
+
+    <div class="quiz-flyout-backdrop" data-quiz-backdrop hidden></div>
+    <aside class="quiz-flyout" id="quiz-flyout" data-quiz-flyout hidden aria-labelledby="quiz-title" role="dialog" aria-modal="false">
+      <div class="quiz-card" id="civic-quiz">
+        <button class="quiz-close" type="button" data-quiz-close aria-label="Закрити квіз">×</button>
+        <div class="quiz-card-rings" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="quiz-card-head">
+          <span class="quiz-kicker">Інтерактивний тест</span>
+          <strong id="quiz-title">Політична грамотність</strong>
+          <p>30 питань, випадковий порядок і пояснення після кожної відповіді.</p>
+        </div>
+        <div class="quiz-shell">
+          <div class="quiz-meta">
+            <span class="quiz-progress-label">Питання <span data-quiz-counter>1</span> / <span data-quiz-total>30</span></span>
+            <span class="quiz-score-label">Бал: <span data-quiz-score>0</span></span>
+          </div>
+          <div class="quiz-progress-track" aria-hidden="true">
+            <span class="quiz-progress-bar" data-quiz-progress></span>
+          </div>
+          <div data-quiz-root></div>
+        </div>
+      </div>
+    </aside>
   </div>
 
+  <script src="./content.js"></script>
+  <script src="./quiz.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>

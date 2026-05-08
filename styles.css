@@ -641,6 +641,15 @@ main section[id] {
   color: var(--brand);
 }
 
+.hero-title-band-accent::after {
+  content: "";
+  width: 44px;
+  height: 2px;
+  margin-left: 14px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
 .hero-copy:hover .hero-title-band {
   transform: translateY(-2px);
   box-shadow: 18px 18px 0 rgba(11, 49, 133, 0.1);
@@ -732,6 +741,15 @@ main section[id] {
   display: grid;
   gap: 14px;
   margin-bottom: 34px;
+}
+
+.section-heading::after {
+  content: "";
+  width: 112px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(255, 196, 0, 0.14));
+  box-shadow: 10px 10px 0 rgba(11, 49, 133, 0.08);
 }
 
 .section-heading .section-title {
@@ -936,6 +954,22 @@ main section[id] {
 .campaigns-card {
   padding: 30px;
   border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.campaigns-card::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: 28px;
+  width: 86px;
+  height: 86px;
+  border: 3px solid rgba(11, 49, 133, 0.12);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 999px;
+  pointer-events: none;
 }
 
 .campaigns-head {
@@ -1375,6 +1409,11 @@ main section[id] {
     font-size: 16px;
   }
 
+  .hero-title-band-accent::after {
+    width: 28px;
+    margin-left: 10px;
+  }
+
   .hero-overlay {
     gap: 18px;
     padding-top: 22px;
@@ -1421,4 +1460,5 @@ main section[id] {
     flex-direction: column;
     align-items: start;
   }
+
 }

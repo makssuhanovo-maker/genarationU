@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ю favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd84d"/>
+      <stop offset="100%" stop-color="#ffc400"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="#0b3185" stroke-opacity=".14"/>
+  <text
+    x="50%"
+    y="54%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Rubik, Arial, sans-serif"
+    font-size="38"
+    font-weight="900"
+    letter-spacing="-3"
+    fill="#0b3185"
+  >Ю</text>
+</svg>

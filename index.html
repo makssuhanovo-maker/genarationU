@@ -18,6 +18,13 @@
 </head>
 <body>
   <div class="page-shell">
+    <div class="page-atmosphere" aria-hidden="true">
+      <span class="atmosphere-line atmosphere-line-one"></span>
+      <span class="atmosphere-line atmosphere-line-two"></span>
+      <span class="atmosphere-dots atmosphere-dots-one"></span>
+      <span class="atmosphere-dots atmosphere-dots-two"></span>
+    </div>
+
     <header class="site-header" id="top">
       <div class="container nav-wrap">
         <a class="brand" href="#top" aria-label="Покоління Ю">
@@ -30,25 +37,46 @@
           </span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-        </button>
+        <div class="header-actions">
+          <div class="social-links" aria-label="Соціальні мережі">
+            <a class="social-link" href="https://www.instagram.com/ugeneration.ua" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/instagram.svg" alt="">
+            </a>
+            <a class="social-link" href="https://t.me/ugeneration_ua" target="_blank" rel="noreferrer" aria-label="Telegram">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/telegram.svg" alt="">
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@u_generation" target="_blank" rel="noreferrer" aria-label="TikTok">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/tiktok.svg" alt="">
+            </a>
+            <a class="social-link" href="https://www.facebook.com/share/17T1o5KnBJ/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/facebook.svg" alt="">
+            </a>
+          </div>
 
-        <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
-          <a href="#about">Про нас</a>
-          <a href="#opportunities">Можливості</a>
-          <a href="#programs">Програми</a>
-          <a href="#results">Результати</a>
-          <a href="#finance">Звіти</a>
-          <a href="#contact">Контакти</a>
-        </nav>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
+            <a href="#about">Про нас</a>
+            <a href="#opportunities">Можливості</a>
+            <a href="#programs">Програми</a>
+            <a href="#results">Результати</a>
+            <a href="#finance">Звіти</a>
+            <a href="#contact">Контакти</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero section">
         <div class="hero-stage reveal">
+          <div class="hero-ribbons" aria-hidden="true">
+            <span class="hero-ribbon hero-ribbon-one"></span>
+            <span class="hero-ribbon hero-ribbon-two"></span>
+          </div>
           <img class="hero-background" src="./assets/hero-collage.png" alt="Команда та учасники Покоління Ю">
 
           <div class="hero-overlay container">

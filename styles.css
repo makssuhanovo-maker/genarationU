@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-offset);
+  overflow-anchor: none;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
     linear-gradient(180deg, #fff9d7 0%, #fff4b5 100%);
   color: var(--ink);
   overflow-x: hidden;
+  overflow-anchor: none;
 }
 
 img {
@@ -64,6 +66,7 @@ button {
   position: relative;
   overflow: clip;
   isolation: isolate;
+  overflow-anchor: none;
 }
 
 .page-shell::before,

@@ -5,10 +5,40 @@ const revealItems = document.querySelectorAll(".reveal");
 const observedSections = document.querySelectorAll("main section[id]");
 const navigationEntry = performance.getEntriesByType("navigation")[0];
 
-window.addEventListener("load", () => {
-  if (window.location.hash) return;
-  if (navigationEntry?.type === "back_forward") return;
+const shouldKeepScrollPosition = () => {
+  if (window.location.hash) return true;
+  if (navigationEntry?.type === "back_forward") return true;
+  return false;
+};
+
+const resetScrollToTop = () => {
+  if (shouldKeepScrollPosition()) return;
+
+  const root = document.documentElement;
+  const previousScrollBehavior = root.style.scrollBehavior;
+
+  root.style.scrollBehavior = "auto";
   window.scrollTo(0, 0);
+
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = previousScrollBehavior;
+    }, 80);
+  });
+};
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = shouldKeepScrollPosition() ? "auto" : "manual";
+}
+
+window.addEventListener("DOMContentLoaded", resetScrollToTop);
+window.addEventListener("load", resetScrollToTop);
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) return;
+  resetScrollToTop();
 });
 
 if (navToggle && siteNav) {

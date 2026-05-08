@@ -1327,11 +1327,11 @@ main section[id] {
   }
 
   .hero-overlay {
-    align-content: end;
-    gap: 24px;
+    align-content: start;
+    gap: 18px;
     min-height: 100%;
-    padding-top: clamp(30px, 7vw, 54px);
-    padding-bottom: 26px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .hero-copy,
@@ -1346,6 +1346,7 @@ main section[id] {
 
   .hero-stats-overlay {
     margin-left: 0;
+    margin-top: auto;
   }
 
   .hero-title-band {
@@ -1418,7 +1419,7 @@ main section[id] {
   }
 
   .hero-stage {
-    min-height: max(600px, calc(100svh - 18px));
+    min-height: auto;
     border-radius: 24px;
   }
 
@@ -1441,19 +1442,19 @@ main section[id] {
   }
 
   .hero-title-stack {
-    gap: 10px;
+    gap: 8px;
   }
 
   .hero-title-band {
-    min-height: 58px;
-    padding: 10px 16px;
-    font-size: clamp(28px, 9vw, 42px);
+    min-height: 52px;
+    padding: 9px 14px;
+    font-size: clamp(24px, 8vw, 38px);
     box-shadow: 10px 10px 0 rgba(11, 49, 133, 0.12);
   }
 
   .hero-title-band-accent {
-    min-height: 48px;
-    font-size: 16px;
+    min-height: 42px;
+    font-size: 14px;
   }
 
   .hero-title-band-accent::after {
@@ -1462,19 +1463,34 @@ main section[id] {
   }
 
   .hero-overlay {
-    gap: 18px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    align-content: start;
+    gap: 14px;
+    padding-top: 12px;
+    padding-bottom: 14px;
   }
 
   .hero-lead-overlay {
-    padding: 16px 18px;
-    font-size: 16px;
-    line-height: 1.6;
+    padding: 14px 16px;
+    font-size: 15px;
+    line-height: 1.52;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .button {
+    min-height: 50px;
+    padding: 0 20px;
+  }
+
+  .hero-stats {
+    gap: 12px;
   }
 
   .hero-stats div {
-    padding: 18px;
+    padding: 16px;
+    border-radius: 20px;
   }
 
   .hero-background {
